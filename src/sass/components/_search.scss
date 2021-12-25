@@ -1,0 +1,62 @@
+.search {
+    &__term {
+        width: 25rem;
+        position: relative;
+
+        &-input {
+            background-color: rgba($color: $color-tertiary, $alpha: 0.5);
+            color: rgba($color: $color-white, $alpha: 0.7);
+            font-family: inherit;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 5rem;
+            padding: 1rem 4rem;
+            transition: all 0.4s;
+
+            &::placeholder {
+                color: rgba($color: $color-white, $alpha: 0.3);
+            }
+
+            &:focus {
+                outline: none;
+                background-color: rgba($color: $color-white, $alpha: 0.9);
+                color: $color-black;
+
+                &::placeholder {
+                    color: rgba($color: $color-black, $alpha: 0.8);
+                }
+            }
+        }
+
+        &-icon {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 2rem;
+            color: $color-black;
+        }
+    }
+
+    &__top-result {
+    }
+
+    &__tracks {
+        padding-right: 1rem;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 0;
+        }
+    }
+
+    &__albums {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 2rem;
+    }
+
+    &__artists {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 2rem;
+    }
+}

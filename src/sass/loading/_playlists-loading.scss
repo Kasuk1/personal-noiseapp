@@ -1,0 +1,38 @@
+.playlists-loading {
+    height: 70vh;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(25rem, min-content));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, min-content));
+    justify-content: end;
+    align-items: start;
+    gap: 2rem;
+    overflow: hidden;
+    animation: loadingOpacity 1s linear infinite;
+
+    &__solo {
+        width: 25rem;
+        height: 25rem;
+        background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+        border-radius: 6px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 1rem 1.5rem;
+
+        &-name {
+            width: 50%;
+            height: 2rem;
+            background-color: $color-secondary;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        &-description {
+            width: 80%;
+            height: 2rem;
+            background-color: $color-secondary;
+            border-radius: 10px;
+        }
+    }
+}

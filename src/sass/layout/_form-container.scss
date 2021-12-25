@@ -1,0 +1,9 @@
+.form-container {
+    height: 70vh;
+    display: grid;
+    grid-template-columns: minmax(25rem, 35rem);
+    align-content: start;
+    gap: 1.5rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

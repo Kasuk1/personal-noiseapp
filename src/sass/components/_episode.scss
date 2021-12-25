@@ -1,0 +1,37 @@
+.episode {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+
+    &__image {
+        width: 20rem;
+        height: 20rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 6px;
+    }
+
+    &__info {
+        width: 65rem;
+
+        &-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        &-description {
+            font-size: 1.5rem;
+            color: rgba($color: $color-white, $alpha: 0.8);
+            margin-bottom: 8px;
+        }
+
+        &-release-date {
+            font-size: 1.5rem;
+            text-align: end;
+            color: $color-shadow;
+        }
+    }
+}

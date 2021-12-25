@@ -1,0 +1,35 @@
+.top-artists {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @media only screen and (max-width: $bp-huge) {
+        display: none;
+    }
+
+    &__artist-small {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-bottom: 4rem;
+        }
+
+        &-image {
+            width: 10.5rem;
+            height: 10.5rem;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &-name {
+            color: $color-white;
+            font-weight: 800;
+            margin-top: 5px;
+        }
+    }
+}

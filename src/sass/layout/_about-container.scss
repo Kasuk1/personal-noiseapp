@@ -1,0 +1,8 @@
+.about-container {
+    height: 70vh;
+    display: grid;
+    gap: 1.5rem;
+    overflow: auto;
+
+    @include scrollbar;
+}

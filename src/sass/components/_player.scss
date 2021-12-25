@@ -1,0 +1,39 @@
+.player {
+    &__buttons {
+        &-center {
+            color: rgba($color: $color-white, $alpha: 0.3);
+            justify-self: center;
+            display: flex;
+            column-gap: 2rem;
+
+            @media only screen and (max-width: $bp-small) {
+                display: none;
+            }
+        }
+
+        &-right {
+            color: rgba($color: $color-white, $alpha: 0.4);
+            justify-self: end;
+            display: flex;
+            column-gap: 2rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                display: none;
+            }
+
+            & .player__icon {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &__icon {
+        font-size: 4rem;
+        cursor: pointer;
+        transition: all 0.35s;
+
+        &:hover {
+            color: rgba($color: $color-white, $alpha: 0.8);
+        }
+    }
+}

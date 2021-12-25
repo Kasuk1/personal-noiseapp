@@ -1,0 +1,22 @@
+.adding-items-loading {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba($color: $color-tertiary, $alpha: 0.9);
+    border-radius: 6px;
+    padding: 1.5rem 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    animation: appearingOpacity 1s;
+
+    &__text {
+        font-size: 2rem;
+    }
+
+    &__icon {
+        font-size: 1.8rem;
+    }
+}

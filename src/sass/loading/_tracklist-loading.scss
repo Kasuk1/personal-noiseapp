@@ -1,0 +1,49 @@
+//* TRACKLIST LOADING */
+.tracklist-loading {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: loadingOpacity 1s ease-in-out infinite;
+
+    &__track {
+        background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+        border-radius: 6px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        &-image {
+            background-color: $color-secondary;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 0.2rem;
+        }
+
+        &-info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-name {
+            width: 60%;
+            height: 2rem;
+            background-color: $color-secondary;
+            border-radius: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        &-artist {
+            width: 50%;
+            height: 2rem;
+            background-color: $color-secondary;
+            border-radius: 2rem;
+        }
+    }
+}

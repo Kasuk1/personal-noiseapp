@@ -1,0 +1,77 @@
+.player-loading {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    animation: loadingOpacity 1s linear infinite;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+    }
+
+    &__track {
+        display: flex;
+        column-gap: 1rem;
+        align-items: center;
+
+        &-image {
+            width: 5rem;
+            height: 5rem;
+            background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+            border-radius: 4px;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        &-name {
+            width: 10rem;
+            height: 1rem;
+            background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+            border-radius: 10px;
+        }
+
+        &-artist {
+            width: 12rem;
+            height: 1rem;
+            background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+            border-radius: 10px;
+        }
+    }
+
+    &__buttons-center {
+        color: $color-tertiary;
+        justify-self: center;
+        font-size: 4rem;
+        display: flex;
+        column-gap: 1rem;
+
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+        }
+    }
+
+    &__buttons-right {
+        color: $color-tertiary;
+        justify-self: end;
+        font-size: 2rem;
+        display: flex;
+        column-gap: 1rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: none;
+        }
+    }
+}

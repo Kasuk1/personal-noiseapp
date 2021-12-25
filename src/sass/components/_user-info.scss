@@ -1,0 +1,89 @@
+.user-info-container {
+    color: $color-shadow;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    .user-info {
+        @media only screen and (max-width: $bp-largest) {
+            display: flex;
+            align-items: center;
+
+            & > *:not(:first-child) {
+                margin-right: 2rem;
+            }
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            & > *:not(:first-child) {
+                display: none;
+            }
+        }
+
+        &__image {
+            width: 35rem;
+            height: 35rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            top: 10rem;
+
+            border-radius: 50%;
+            z-index: 5;
+
+            @media only screen and (max-width: $bp-huge) {
+                width: 8rem;
+                height: 8rem;
+                top: 0;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                width: 12vw;
+                height: 12vw;
+            }
+        }
+
+        &__name {
+            color: $color-white;
+            font-size: 12.5rem;
+            font-weight: 800;
+            position: relative;
+            left: -0.8rem;
+            line-height: 1.4;
+            z-index: 10;
+
+            @media only screen and (max-width: $bp-huge) {
+                font-size: 5rem;
+            }
+        }
+
+        &-product {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 15;
+
+            &__premium {
+                color: #77d102;
+                text-transform: uppercase;
+                font-weight: 900;
+            }
+
+            &__normal {
+                color: $color-shadow;
+                text-transform: uppercase;
+                font-weight: 900;
+            }
+        }
+
+        &__more {
+            text-decoration: none;
+            font-size: 2rem;
+            color: $color-white;
+            margin-left: 0.5rem;
+            cursor: pointer;
+        }
+    }
+}

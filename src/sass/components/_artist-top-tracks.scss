@@ -1,0 +1,7 @@
+.artist-top-tracks {
+    padding-right: 1rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+        padding: 0;
+    }
+}

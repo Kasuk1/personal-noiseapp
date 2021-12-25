@@ -1,0 +1,115 @@
+.playlist-detail {
+    height: 70vh;
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, auto));
+    grid-auto-rows: 20vh;
+    gap: 2rem;
+    overflow-y: auto;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: grid;
+        justify-items: center;
+        overflow-y: auto;
+        gap: 5rem;
+        @include scrollbar;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, auto));
+    }
+
+    // TrackList Style - Right Side
+    &__tracklist {
+        height: 70vh;
+        padding-right: 1rem;
+        overflow-y: auto;
+        @include scrollbar;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: grid;
+            grid-template-columns: minmax(25rem, auto);
+
+            overflow-y: visible;
+            height: auto;
+            align-self: start;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding: 0;
+        }
+    }
+
+    // Playlist Info Style - Left Side
+    &__info {
+        width: 35rem;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 30rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            width: 25rem;
+        }
+    }
+
+    &__image {
+        width: 35rem;
+        height: 35rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 6px;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 30rem;
+            height: 30rem;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+            width: 25rem;
+            height: 25rem;
+        }
+    }
+
+    &__name {
+        font-size: 6rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__description {
+        font-size: 1.6rem;
+        color: rgba($color: $color-white, $alpha: 0.7);
+        margin-bottom: 5rem;
+    }
+
+    &__owner {
+        display: flex;
+        align-items: center;
+
+        &-image {
+            width: 4rem;
+            height: 4rem;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+        }
+
+        &-name {
+            font-size: 1.6rem;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    }
+
+    &__total {
+        font-size: 1.6rem;
+        flex-grow: 1;
+        text-align: right;
+    }
+}

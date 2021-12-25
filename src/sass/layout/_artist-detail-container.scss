@@ -1,0 +1,9 @@
+.artist-detail-container {
+    display: grid;
+    grid-template-columns: minmax(25rem, auto);
+    row-gap: 3rem;
+
+    height: 70vh;
+    overflow-y: auto;
+    @include scrollbar;
+}

@@ -1,0 +1,99 @@
+.artist-info {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 18rem 3rem 2rem 3rem;
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    row-gap: 2rem;
+
+    transition: padding 0.4s;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding-top: 18vw;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    &.active {
+        padding-top: 40%;
+    }
+
+    &__type {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 0.05rem;
+        color: $color-white-alpha;
+        margin-bottom: -2rem;
+    }
+
+    &__name {
+        font-size: 10rem;
+        font-weight: 600;
+        line-height: 0.9;
+        margin-left: -0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: flex-end;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 10vw;
+        }
+    }
+
+    &__followers {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $color-white-alpha;
+        text-transform: uppercase;
+        background-color: rgba($color: $color-shadow, $alpha: 0.9);
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+    }
+
+    &__genres {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    &__genre {
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        background-color: rgba($color: $color-tertiary, $alpha: 0.85);
+        padding: 0.5rem 1.5rem;
+        border-radius: 2rem;
+    }
+
+    &__arrow-down {
+        align-self: center;
+        font-size: 3rem;
+        font-weight: 900;
+        color: $color-white-alpha;
+        margin-bottom: -2rem;
+        transform: rotate(90deg);
+        cursor: pointer;
+        transition: transform 0.3s;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: none;
+        }
+
+        &.active {
+            transform: rotate(-90deg);
+        }
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+}

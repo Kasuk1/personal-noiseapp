@@ -1,0 +1,97 @@
+.show-loading {
+    display: flex;
+    flex-direction: column;
+    animation: loadingOpacity 1s linear infinite;
+
+    &__detail {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 6rem;
+
+        &-image {
+            width: 30rem;
+            height: 30rem;
+            background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+            border-radius: 6px;
+        }
+
+        &-info {
+            width: 55rem;
+            margin-right: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            &-type {
+                width: 10rem;
+                height: 3rem;
+                border-radius: 6px;
+                background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+                margin-bottom: 1rem;
+            }
+
+            &-name {
+                width: 50rem;
+                height: 4rem;
+                border-radius: 6px;
+                background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+                margin-bottom: 0.5rem;
+            }
+
+            &-publisher {
+                width: 20rem;
+                height: 3rem;
+                background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+                border-radius: 6px;
+                margin-bottom: 2rem;
+            }
+
+            &-description {
+                height: 10rem;
+                background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+                border-radius: 6px;
+            }
+        }
+    }
+
+    &__episode {
+        display: flex;
+        justify-content: space-around;
+
+        &-image {
+            width: 20rem;
+            height: 20rem;
+            background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+            border-radius: 6px;
+        }
+
+        &-info {
+            width: 65rem;
+            position: relative;
+
+            &-name {
+                height: 6rem;
+                background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+                border-radius: 6px;
+                margin-bottom: 1rem;
+            }
+
+            &-description {
+                height: 9rem;
+                background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+                border-radius: 6px;
+                margin-bottom: 1.5rem;
+            }
+
+            &-release-date {
+                width: 10rem;
+                height: 2.5rem;
+                background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+                border-radius: 6px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+}

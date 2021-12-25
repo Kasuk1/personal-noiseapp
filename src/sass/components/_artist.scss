@@ -1,0 +1,40 @@
+.artist {
+    width: 25rem;
+    height: 35rem;
+    background-color: rgba($color: $color-tertiary, $alpha: 0.6);
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    border-radius: 6px;
+    transition: background-color 0.4s;
+
+    &:hover {
+        background-color: rgba($color: $color-tertiary, $alpha: 0.9);
+    }
+
+    &__image {
+        width: 20rem;
+        height: 20rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        box-shadow: 0 2.5rem 2rem $rgba-shadow-20;
+        margin-bottom: 1.5rem;
+    }
+
+    &__name {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    &__type {
+        color: $color-white-alpha;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}

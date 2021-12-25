@@ -1,0 +1,41 @@
+.form {
+    &-input {
+        width: 100%;
+        background-color: transparent;
+        color: $color-white;
+        font-family: inherit;
+        border: none;
+        transition: all 0.3s;
+
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid rgba($color: $color-white, $alpha: 0.6);
+        }
+
+        &__image {
+            width: 35rem;
+            height: 35rem;
+            border-radius: 6px;
+            background-color: $color-tertiary;
+
+            @media only screen and (max-width: $bp-smallest) {
+                width: 25rem;
+                height: 25rem;
+            }
+        }
+
+        &__name {
+            font-size: 6rem;
+            margin-left: -0.3rem;
+        }
+
+        &__description {
+            font-size: 1.6rem;
+            color: rgba($color: $color-white, $alpha: 0.7);
+        }
+    }
+
+    &-button {
+        justify-self: start;
+    }
+}

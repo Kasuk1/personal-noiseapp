@@ -1,0 +1,24 @@
+.user-container-login {
+    grid-column: col-start 1 / col-end 12;
+    align-self: stretch;
+
+    display: grid;
+    grid-template-rows: 3fr min-content 1fr;
+    row-gap: 2rem;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    &__logo {
+        font-family: "K2D", sans-serif;
+        font-size: 8.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__author {
+        font-size: 1.4rem;
+        color: $color-shadow;
+        align-self: start;
+    }
+}

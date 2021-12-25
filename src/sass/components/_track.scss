@@ -1,0 +1,79 @@
+.track {
+    background-color: transparent;
+    height: 7rem;
+    padding: 11px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.15s;
+
+    @media only screen and (max-width: $bp-smallest) {
+        padding: 0;
+    }
+
+    &:hover {
+        background-color: rgba($color: $color-tertiary, $alpha: 0.6);
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+
+    & > *:not(:last-child) {
+        margin-right: 1.5rem;
+    }
+
+    &__number {
+        font-size: 2rem;
+        flex: 0 0 2.5rem;
+        text-align: right;
+        color: rgba($color: $color-white, $alpha: 0.7);
+    }
+
+    &__image {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 1.5px;
+    }
+
+    &__name {
+        color: inherit;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        @include textElipsis;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__artists {
+        font-size: 1.5rem;
+        @include textElipsis;
+    }
+
+    &__artist {
+        color: rgba($color: $color-white, $alpha: 0.8);
+
+        &:not(:last-child) {
+            &::after {
+                content: ", ";
+            }
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &.track-player {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}

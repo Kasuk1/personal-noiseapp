@@ -1,0 +1,12 @@
+.search-container {
+    height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    display: grid;
+    grid-template-columns: minmax(25rem, 1fr);
+    align-items: start;
+    gap: 2rem;
+
+    @include scrollbar;
+}

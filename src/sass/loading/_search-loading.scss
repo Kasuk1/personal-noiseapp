@@ -1,0 +1,12 @@
+.search-loading {
+    display: grid;
+    gap: 2.5rem;
+    animation: loadingOpacity 1s linear infinite;
+
+    &__subtitle {
+        background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+        width: 14rem;
+        height: 3rem;
+        border-radius: 6px;
+    }
+}

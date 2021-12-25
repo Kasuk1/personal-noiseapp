@@ -1,0 +1,19 @@
+.container {
+    background: linear-gradient(90.1deg, #121214 7.77%, #1e1d2b 88.29%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-rows: 100vh;
+    grid-template-columns:
+        [full-start] 14rem [center-start] repeat(12, [col-start] minmax(min-content, 16rem) [col-end])
+        [center-end] 14rem [full-end];
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-largest) {
+        grid-template-columns:
+            [full-start] 2rem [center-start] repeat(12, [col-start] minmax(min-content, 16rem) [col-end])
+            [center-end] 2rem [full-end];
+    }
+}

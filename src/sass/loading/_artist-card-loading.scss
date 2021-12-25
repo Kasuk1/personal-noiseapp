@@ -1,0 +1,40 @@
+.artist-card-loading {
+    background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+    width: 25rem;
+    height: 35rem;
+    border-radius: 6px;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    &__image {
+        background-color: $color-secondary;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        gap: 1rem;
+    }
+
+    &__name {
+        background-color: $color-secondary;
+        width: 12rem;
+        height: 3rem;
+        border-radius: 6px;
+    }
+
+    &__type {
+        background-color: $color-secondary;
+        width: 10rem;
+        height: 3rem;
+        border-radius: 6px;
+    }
+}

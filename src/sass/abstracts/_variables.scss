@@ -1,0 +1,31 @@
+//* COLORS
+$color-primary: #121214;
+$color-secondary: #1e1d2b;
+$color-tertiary: #2f2c40;
+$color-quaternary: #383451;
+
+$color-black: #000;
+$color-white: #fff;
+$color-white-alpha: rgba($color-white, 0.8);
+$color-shadow: #797684;
+
+//* SHADOWS
+$rgba-shadow-10: rgba($color-black, 0.1);
+$rgba-shadow-15: rgba($color-black, 0.15);
+$rgba-shadow-20: rgba($color-black, 0.2);
+$rgba-shadow-40: rgba($color-black, 0.4);
+$rgba-shadow-50: rgba($color-quaternary, 0.5);
+
+//* FONT
+$default-font-size: 1.6rem;
+
+//* MEDIA QUERIES
+$bp-giant: 112.5em; //* 1800px
+$bp-huge: 103.125em; //* 1650px
+$bp-grand: 87.5em; //* 1400px
+$bp-largest: 75em; //* 1200px
+$bp-large: 68.75em; //* 1100px
+$bp-medium: 56.25em; //* 900px
+$bp-small: 37.5em; //* 600px
+$bp-smallest: 31.25em; //* 500px
+$bp-tiny: 25em; //* 400px

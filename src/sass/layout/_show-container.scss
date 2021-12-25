@@ -1,0 +1,16 @@
+.show-container {
+    height: 70rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+        background-color: $color-tertiary;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $color-shadow;
+    }
+}

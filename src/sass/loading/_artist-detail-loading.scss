@@ -1,0 +1,46 @@
+.artist-detail-loading {
+    height: 70vh;
+    display: grid;
+    grid-template-columns: minmax(25rem, 1fr);
+    gap: 2.5rem;
+    overflow: hidden;
+    animation: loadingOpacity 1s ease-in-out infinite;
+
+    &__background {
+        background-color: rgba($color: $color-tertiary, $alpha: 0.8);
+        width: 100%;
+        padding: 15rem 3rem 6rem 3rem;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: flex-end;
+
+        &-type {
+            background-color: $color-secondary;
+            width: 10rem;
+            height: 4rem;
+            border-radius: 1rem;
+        }
+
+        &-name {
+            background-color: $color-secondary;
+            width: 60%;
+            height: 10rem;
+            border-radius: 2rem;
+        }
+
+        &-genres {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        &-genre {
+            background-color: $color-secondary;
+            width: 10rem;
+            height: 4rem;
+            border-radius: 4rem;
+        }
+    }
+}

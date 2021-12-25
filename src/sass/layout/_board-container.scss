@@ -1,0 +1,13 @@
+.board-container {
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, min-content));
+    justify-content: end;
+    gap: 2rem;
+
+    padding-right: 1rem;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    @include scrollbar;
+}

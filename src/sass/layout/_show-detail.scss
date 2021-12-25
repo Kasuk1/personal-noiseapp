@@ -1,0 +1,54 @@
+.show-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+
+    &__image {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 30rem;
+        height: 30rem;
+        border-radius: 6px;
+    }
+
+    &__info {
+        width: 55rem;
+        margin-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        &-type {
+            color: $color-shadow;
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+
+        &-name {
+            font-size: 6rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-left: -3px;
+            margin-bottom: 0;
+        }
+
+        &-publisher {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        &-description {
+            font-size: 1.5rem;
+            color: rgba($color: $color-white, $alpha: 0.8);
+        }
+    }
+}
+
+.episodes-container {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,35 @@
+.board-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $color-white;
+    cursor: pointer;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0 2.5rem 2rem $rgba-shadow-20;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+
+    &__text {
+        width: 100%;
+
+        &-name {
+            font-size: 2rem;
+            font-weight: 700;
+            @include textElipsis;
+        }
+
+        &-description {
+            font-size: 1.6rem;
+            color: rgba($color: $color-white, $alpha: 0.75);
+            @include textElipsis;
+        }
+    }
+}
