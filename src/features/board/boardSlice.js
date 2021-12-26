@@ -45,7 +45,7 @@ export const boardSlice = createSlice({
             .addCase(getUserPlaylists.fulfilled, (state, action) => {
                 state.userPlaylistsIsLoading = false;
                 state.userPlaylistsError = false;
-                console.log("These are the playlists: ",action.payload.items)
+                /* console.log("These are the playlists: ",action.payload.items) */
                 state.userPlaylists = action.payload.items;
             })
             .addCase(getUserPlaylists.rejected, (state) => {
@@ -59,7 +59,7 @@ export const boardSlice = createSlice({
             .addCase(getUserShows.fulfilled, (state, action) => {
                 state.userShowsLoading = false;
                 state.userShowsError = false;
-                console.log("These are the shows: ",action.payload.items)
+                /* console.log("These are the shows: ",action.payload.items) */
                 state.userShows = action.payload.items.map(show => show.show);
             })
             .addCase(getUserShows.rejected, (state) => {
@@ -73,7 +73,7 @@ export const boardSlice = createSlice({
             .addCase(getUserAlbums.fulfilled, (state, action) => {
                 state.userAlbumsLoading = false;
                 state.userAlbumsError = false;
-                console.log("These are the albums: ",action.payload.items.map(album => album.album));
+                /* console.log("These are the albums: ",action.payload.items.map(album => album.album)); */
                 state.userAlbums = action.payload.items.map(album => album.album);
             })
             .addCase(getUserAlbums.rejected, (state) => {

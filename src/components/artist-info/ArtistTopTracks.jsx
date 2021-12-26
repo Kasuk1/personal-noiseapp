@@ -18,7 +18,7 @@ export const ArtistTopTracks = () => {
 
     return (
         <div className="artist-top-tracks">
-            {artistTopTracks.map((track, index) => <Track track={track} index={index}/>)}
+            {artistTopTracks.map((track, index) => <Track key={track.id} track={track} index={index} />)}
             <OptionsMenu x={x} y={y} showMenu={showMenu} trackURI={trackURI} showRemove={false} />
         </div>
     );

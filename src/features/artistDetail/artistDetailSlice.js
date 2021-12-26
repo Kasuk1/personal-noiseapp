@@ -50,7 +50,7 @@ export const artistDetailSlice = createSlice({
             .addCase(getArtist.fulfilled, (state, action) => {
                 state.artistLoading = false;
                 state.artistError = false;
-                console.log("This is the artist information: " ,action.payload);
+                /* console.log("This is the artist information: " ,action.payload); */
                 state.artist = action.payload;
             })
             .addCase(getArtist.rejected, (state) => {
@@ -64,7 +64,7 @@ export const artistDetailSlice = createSlice({
             .addCase(getArtistTopTracks.fulfilled, (state, action) => {
                 state.topTracksLoading = false;
                 state.topTracksError = false;
-                console.log("These are the top-tracks information: " ,action.payload.tracks);
+                /* console.log("These are the top-tracks information: " ,action.payload.tracks); */
                 state.topTracks = action.payload.tracks;
             })
             .addCase(getArtistTopTracks.rejected, (state) => {
@@ -78,7 +78,7 @@ export const artistDetailSlice = createSlice({
             .addCase(getArtistAlbums.fulfilled, (state, action) => {
                 state.albumsLoading = false;
                 state.albumsError = false;
-                console.log("These are the albums information: " ,action.payload.items);
+                /* console.log("These are the albums information: " ,action.payload.items); */
                 state.albums = action.payload.items;
             })
             .addCase(getArtistAlbums.rejected, (state) => {
@@ -92,7 +92,7 @@ export const artistDetailSlice = createSlice({
             .addCase(getArtistRelatedArtists.fulfilled, (state, action) => {
                 state.relatedArtistsLoading = false;
                 state.relatedArtistsError = false;
-                console.log("These are the related artists information: ", action.payload.artists);
+                /* console.log("These are the related artists information: ", action.payload.artists); */
                 state.relatedArtists = action.payload.artists;
             })
             .addCase(getArtistRelatedArtists.rejected, (state) => {

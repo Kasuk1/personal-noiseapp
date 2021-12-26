@@ -15,8 +15,8 @@ export const playlistDetailLoading = () => {
             </div>
 
             <div className="tracklist-loading">
-                {[1,2,3,4,5,6,7,8].map(() => {
-                    return trackLoading();
+                {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => {
+                    return trackLoading(num);
                 })}
             </div>
         </div>

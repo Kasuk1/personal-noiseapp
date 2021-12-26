@@ -19,7 +19,7 @@ export const searchSlice = createSlice({
         searchResultsError: false
     },
     reducers: {
-        setSearchTerm(state, action){
+        setSearchTerm(state, action) {
             state.searchTerm = action.payload;
         }
     },
@@ -32,7 +32,7 @@ export const searchSlice = createSlice({
             .addCase(searchItem.fulfilled, (state, action) => {
                 state.searchResultsLoading = false;
                 state.searchResultsError = false;
-                console.log("This is the search result: " ,action.payload);
+                /* console.log("This is the search result: " ,action.payload); */
                 state.searchResults = action.payload;
             })
             .addCase(searchItem.rejected, (state) => {

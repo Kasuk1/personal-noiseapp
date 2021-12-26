@@ -3,22 +3,22 @@ const CLIENT_ID = "a90ef9e2a11040709163cbb28282d092";
 const SPOTIFY_AUTHORIZE_ENDPOINT = "https://accounts.spotify.com/authorize";
 const REDIRECT_URI = "http://localhost:3000/";
 
-const SCOPES = ["user-read-private", 
-                "user-read-email", 
-                "playlist-modify-public",
-                "playlist-modify-private", 
-                "user-follow-read",
-                "user-top-read",
-                "playlist-read-private", 
-                "user-library-read",
-                "user-read-playback-position",
-                "user-read-currently-playing",
-                "user-read-playback-state"];
+const SCOPES = ["user-read-private",
+    "user-read-email",
+    "playlist-modify-public",
+    "playlist-modify-private",
+    "user-follow-read",
+    "user-top-read",
+    "playlist-read-private",
+    "user-library-read",
+    "user-read-playback-position",
+    "user-read-currently-playing",
+    "user-read-playback-state"];
 
 const SCOPES_URL_PARAM = SCOPES.join("%20");
 
 //! SPOTIFY MODULE
-export const Spotify  = {
+export const Spotify = {
 
     getAccessToken() {
         /* let token = localStorage.getItem("token");
@@ -132,11 +132,13 @@ export const Spotify  = {
 
         const json = await response.json();
 
-        const trackIDS = json.tracks.items.map(track => track.track.id).slice(0,50).join(",");
+        const trackIDS = json.tracks.items.map(track => track.track.id).slice(0, 50).join(",");
         const trackList = await this.getSeveralTracks(trackIDS);
+        const userInfo = await this.getUserInfoByID(json.owner.id);
 
         return {
             ...json,
+            owner: { ...userInfo },
             tracks: {
                 items: trackList || [],
                 total: json.tracks.total
@@ -185,12 +187,15 @@ export const Spotify  = {
         });
 
         const json = await response.json();
-        
-        const trackIDs = json.tracks.items.map(track => track.id).slice(0,50).join(",");
+
+        const trackIDs = json.tracks.items.map(track => track.id).slice(0, 50).join(",");
         const trackList = await this.getSeveralTracks(trackIDs);
+        const artist = await this.getArtistInfo(json.artists[0].id);
+
 
         return {
             ...json,
+            artist,
             tracks: {
                 items: trackList || [],
                 total: json.tracks.total
@@ -200,14 +205,14 @@ export const Spotify  = {
 
     async getArtistInfo(artistID) {
         const currentToken = localStorage.getItem("token");
-        
+
         const endpoint = `https://api.spotify.com/v1/artists/${artistID}`;
         const response = await fetch(endpoint, {
             headers: {
                 Authorization: `Bearer ${currentToken}`
             }
         });
-        
+
         const json = await response.json();
         return json;
     },
@@ -215,7 +220,7 @@ export const Spotify  = {
     //*-----------------------------------ARTIST DETAIL SLICE REQUESTS--------------------------------*/
     async getArtist(artistID) {
         const currentToken = localStorage.getItem("token");
-        
+
         const endpoint = `https://api.spotify.com/v1/artists/${artistID}`;
         const response = await fetch(endpoint, {
             headers: {
@@ -287,7 +292,7 @@ export const Spotify  = {
     //*-----------------------------------PLAYER SLICE REQUESTS--------------------------------*/
     async getCurrentPlayingTrack() {
         const currentToken = localStorage.getItem("token");
-        
+
         const endpoint = `https://api.spotify.com/v1/me/player/currently-playing?market=from_token`;
         const response = await fetch(endpoint, {
             headers: {

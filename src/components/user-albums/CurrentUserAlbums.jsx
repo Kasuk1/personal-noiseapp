@@ -1,5 +1,5 @@
 //* IMPORT BASIC
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 //* IMPORT REACT COMPONENTS
@@ -24,7 +24,7 @@ export const CurrentUserAlbums = () => {
     }, [dispatch]);
 
     //* Render loading
-    if(userAlbumsLoading) return boardElementsLoading();
+    if (userAlbumsLoading) return boardElementsLoading();
 
     //* Return final current-user-album
     return (

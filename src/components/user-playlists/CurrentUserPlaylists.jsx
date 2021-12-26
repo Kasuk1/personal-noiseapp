@@ -1,5 +1,5 @@
 //* IMPORT BASIC
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { Playlist } from './Playlist';
 
 //* IMPORT SLICES
-import {  getUserPlaylists, selectUserPlaylists, selectUserPlaylistsLoading } from '../../features/board/boardSlice';
+import { getUserPlaylists, selectUserPlaylists, selectUserPlaylistsLoading } from '../../features/board/boardSlice';
 
 //* IMPORT LOADING STYLES
 import { boardElementsLoading } from '../../helper/loading-state-jsx/boardElementsLoading';
@@ -21,8 +21,8 @@ export const CurrentUserPlaylists = () => {
         dispatch(getUserPlaylists());
     }, [dispatch]);
 
-    if(userPlaylistsLoading) return boardElementsLoading();
-    
+    if (userPlaylistsLoading) return boardElementsLoading();
+
     return (
         <div className="board-container">
             <Link className="add-playlist-button" to="/new-playlist">+</Link>

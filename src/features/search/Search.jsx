@@ -26,19 +26,19 @@ export const Search = () => {
     const { x, y, showMenu, trackURI } = useRightClickMenu();
     const dispatch = useDispatch();
     const searchTerm = useSelector(selectSearchTerm);
-    const {artists, albums, tracks} = useSelector(selectSearchResult);
+    const { artists, albums, tracks } = useSelector(selectSearchResult);
     const searchResultLoading = useSelector(selectSearchResultLoading)
 
-    const handleSearchTerm = ({target}) => {
-       dispatch(setSearchTerm(target.value))
+    const handleSearchTerm = ({ target }) => {
+        dispatch(setSearchTerm(target.value))
     }
 
     const renderResults = () => {
         const noResults = () => <h3 className="heading-3">No results, please try to insert a valid name.</h3>;
 
-        if(searchResultLoading) return searchLoading();
+        if (searchResultLoading) return searchLoading();
 
-        if(tracks || albums || artists) {
+        if (tracks || albums || artists) {
             return (
                 <>
                     <h2 className="heading-2">Top result</h2>
@@ -63,12 +63,12 @@ export const Search = () => {
             return;
         }
     }
-    
+
     useEffect(() => {
         dispatch(searchItem(searchTerm));
     }, [dispatch, searchTerm]);
 
-    
+
     //* Return final Search
     return (
         <div className="search-container">

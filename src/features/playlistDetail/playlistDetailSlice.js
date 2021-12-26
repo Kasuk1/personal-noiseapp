@@ -14,7 +14,7 @@ export const getUserInfo = createAsyncThunk(
 );
 
 //* Slice Reducer
-export const playlistDetailSlice = createSlice({
+const playlistDetailSlice = createSlice({
     name: "playlistDetail",
     initialState: {
         playlist: {},

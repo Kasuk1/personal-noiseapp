@@ -1,5 +1,4 @@
 //* IMPORT BASIC
-import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 //*¨IMPORT SELECTORS
@@ -20,7 +19,7 @@ export const NewPlaylist = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(createPlaylist({name: newPlaylistName || "New Playlist" , description: newPlaylistDescription || "Created in Noise by Igor"}));
+        dispatch(createPlaylist({ name: newPlaylistName || "New Playlist", description: newPlaylistDescription || "Created in Noise by Igor" }));
         dispatch(setNewPlaylistName("New Playlist"));
         dispatch(setNewPlaylistDescription("Created in Noise by Igor"));
     }

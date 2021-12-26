@@ -40,8 +40,12 @@
             }
 
             @media only screen and (max-width: $bp-small) {
-                width: 12vw;
-                height: 12vw;
+                width: 6rem;
+                height: 6rem;
+            }
+
+            @media only screen and (max-width: $bp-tiny) {
+                display: none;
             }
         }
 
@@ -59,11 +63,21 @@
             }
         }
 
+        &__followers {
+            @media only screen and (max-width: $bp-medium) {
+                display: none;
+            }
+        }
+
         &-product {
             display: flex;
             align-items: center;
             position: relative;
             z-index: 15;
+
+            @media only screen and (max-width: $bp-medium) {
+                display: none;
+            }
 
             &__premium {
                 color: #77d102;

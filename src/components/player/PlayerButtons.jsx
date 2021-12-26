@@ -3,9 +3,9 @@ import * as React from 'react';
 
 //* IMPORT FONT AWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBackward, faForward, faPlay, faPause, faVolumeUp, faVolumeDown, faVolumeOff, faVolumeMute, faLaptop } from '@fortawesome/free-solid-svg-icons';
+import { faBackward, faForward, faPlay, faPause, faVolumeUp, /* faVolumeDown, faVolumeOff, faVolumeMute, */ faLaptop } from '@fortawesome/free-solid-svg-icons';
 
-export const PlayerButtons = ({isPlaying}) => {
+export const PlayerButtons = ({ isPlaying }) => {
     return (
         <>
             <div className="player__buttons-center">

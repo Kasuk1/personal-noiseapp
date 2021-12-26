@@ -1,5 +1,3 @@
-// @flow 
-import React from 'react';
 import { useSelector } from 'react-redux';
 
 import { Album } from '../Album';
@@ -11,7 +9,7 @@ export const ArtistAlbums = () => {
 
     return (
         <div className="artist-albums">
-            {artistAlbums.map(album => <Album album={album} />)}
+            {artistAlbums.map(album => <Album key={album.id} album={album} />)}
         </div>
     );
 };

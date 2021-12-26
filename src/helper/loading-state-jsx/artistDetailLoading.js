@@ -7,12 +7,12 @@ export const artistDetailLoading = () => {
                 <div className="artist-detail-loading__background-type"></div>
                 <div className="artist-detail-loading__background-name"></div>
                 <div className="artist-detail-loading__background-genres">
-                    {[1,2,3,4,5].map(genre => <div className="artist-detail-loading__background-genre"></div>)}
+                    {[1, 2, 3, 4, 5].map(num => <div key={num} className="artist-detail-loading__background-genre"></div>)}
                 </div>
             </div>
             <div className="tracklist-loading">
-                {[1,2,3,4,5].map(track => {
-                    return trackLoading();
+                {[1, 2, 3, 4, 5].map(num => {
+                    return trackLoading(num);
                 })}
             </div>
         </div>
