@@ -15,7 +15,8 @@ export const TopArtists = () => {
     //* Mapping through artists to get just 4 of them
     const topArtists = artists.map(artist => {
         return {
-            name: artist.name, 
+            id: artist.id,
+            name: artist.name,
             image: artist.images[1].url,
             href: artist.external_urls.spotify
         }

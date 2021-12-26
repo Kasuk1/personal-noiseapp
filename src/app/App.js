@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 
 //* IMPORT SLICES
 import { getCurrentUserInfo, getCurrentUserTopArtists } from '../features/user/userSlice';
+import { getUserPlaylists } from '../features/board/boardSlice';
 
 //* IMPORT MAIN SCSS STYLESHEET
 import "../sass/main.scss";
@@ -46,7 +47,10 @@ const App = () => {
             localStorage.clear();
         }, localStorage.getItem("expiresIn") * 1000);
 
-        return () => clearTimeout(timeout);
+        return () => {
+            localStorage.clear();
+            clearTimeout(timeout);
+        }
     }, []);
 
     useEffect(() => {
@@ -60,24 +64,26 @@ const App = () => {
         if (localStorage.getItem("token")) {
             dispatch(getCurrentUserInfo());
             dispatch(getCurrentUserTopArtists());
+            dispatch(getUserPlaylists());
         }
     }, [dispatch]);
 
-    if (!accessToken) {
-        return (
-            <div className="container">
-                <div className="user-container-login">
-                    <h1 className="user-container-login__logo">Noise</h1>
-                    <button className="primary-button" onClick={handleLogin}>Login</button>
-                    <p className="user-container-login__author">Developed by Igor</p>
-                </div>
-            </div>
-        );
-    }
-
     return (
         <div className="container">
-            <AppRouter />
+            {
+                accessToken ? (
+                    <AppRouter />
+                )
+                    :
+                    (
+                        <div className="user-container-login">
+                            <h1 className="user-container-login__logo">Noise</h1>
+                            <button className="primary-button" onClick={handleLogin}>Login</button>
+                            <p className="user-container-login__author">Developed by Igor</p>
+                        </div>
+                    )
+            }
+
         </div>
     );
 }
