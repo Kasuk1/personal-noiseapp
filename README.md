@@ -1,44 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# NoiseApp
 
-## Available Scripts
+This project was created to be part of my portfolio and will probably receive updates through my learning process. The requirements were self-assigned with basis in my daily learning.
 
-In the project directory, you can run:
+Now I'm going to divide the entire process followed to the final result of this application. But before that, I will mention some important technologies used in the entire stack (This project start with Front-end objective, probably improved in the future through Back-end).
 
-### `yarn start`
+## Technologies
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- HTML, CSS, JS
+- SCSS
+- React
+- Redux Toolkit
+- ReactRouter v5
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Process
 
-### `yarn test`
+Now I'm going to divide the entire process followed to the final result of this application.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Wireframe
 
-### `yarn build`
+The [wireframing](https://www.figma.com/file/LUmoAiitPxxeCoy1ZmYgmO/Personal-Project---Noise?node-id=2%3A28) of this project was made in Figma and was useful to structure the components that will be used in the React project. Although you're going to realize that the aspect and structure will change in the prototype process and that's normal(at least with personal projects).
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prototype
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+The [prototype](https://www.figma.com/file/LUmoAiitPxxeCoy1ZmYgmO/Personal-Project---Noise?node-id=2%3A29) is medium-fidelity and was made in Figma as well. Does not contain neither animations nor functionality, but have a close approach to the final design to be implemented. The full prototype is not finished to all the views, and that's because the lack of knowledge from Spotify API. Will probably be updated but is not relevant at this point.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Front-end
 
-### `yarn eject`
+The app is based in React in collaboration with Redux to manage the state. The process to structure the initial files and folders is tough to me but I tried my best at this point and tried to avoid too much code in a single file as well.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The style was made with SCSS without any framework. The structure folder was implemented isolated just for the styles.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Another point is the loading state. With Redux was possible to tracked all the loading state when I made async requests and can have an state for the loaded and rejected state. The loading state's design was purely implemented with SCSS but this wasn't prepared in the wireframe process though. And it obvisuly exists libraries to render loading state friendly.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Deployment
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The app is deployed in [Netlify]().
 
-## Learn More
+## Future Work
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I will probably implement a Back-end to this app, but before we need to think in something that have sens to be stored. It will be useful to my learning path though.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Copyright
+
+You can use this project as your will, but can't claimed as yours with the design base.
