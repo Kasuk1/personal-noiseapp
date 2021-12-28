@@ -1,7 +1,7 @@
 //! BASIC VARIABLES
 const CLIENT_ID = "a90ef9e2a11040709163cbb28282d092";
 const SPOTIFY_AUTHORIZE_ENDPOINT = "https://accounts.spotify.com/authorize";
-const REDIRECT_URI = "http://localhost:3000/";
+const REDIRECT_URI = "https://noise-app.netlify.app/";
 
 const SCOPES = ["user-read-private",
     "user-read-email",
