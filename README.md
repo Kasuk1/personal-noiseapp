@@ -34,7 +34,7 @@ Another point is the loading state. With Redux was possible to tracked all the l
 
 ### Deployment
 
-The app is deployed in [Netlify]().
+The app is deployed in [Netlify](https://noise-app.netlify.app/).
 
 ## Future Work
 
