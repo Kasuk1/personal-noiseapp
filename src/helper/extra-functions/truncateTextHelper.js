@@ -9,3 +9,7 @@ export const truncatePlaylistDescription = (text) => {
 export const truncateArtistName = (text) => {
     return text.length > 18 ? `${text.substring(0, 15)}...` : text;
 }
+
+export const truncateUserInfoName = (text) => {
+    return text.length > 8 ? `${text.substring(0, 5)}...` : text;
+}

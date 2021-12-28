@@ -54,6 +54,10 @@
             font-size: 12.5rem;
             font-weight: 800;
             position: relative;
+            /* text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap; */
+            width: 50%;
             left: -0.8rem;
             line-height: 1.4;
             z-index: 10;

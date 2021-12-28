@@ -32,7 +32,7 @@ export const PlaylistInfo = () => {
                 <p className="playlist-detail__description">{description}</p>
 
                 <div className="playlist-detail__owner">
-                    <div className="playlist-detail__owner-image" style={{ backgroundImage: `url(${owner_img[0].url})` }}></div>
+                    <div className="playlist-detail__owner-image" style={owner_img.length > 0 ? { backgroundImage: `url(${owner_img[0].url})` } : { backgroundImage: `url(https://cdn-icons-png.flaticon.com/512/149/149071.png)` }}></div>
                     <p className="playlist-detail__owner-name" onClick={handleRefUser}>{owner_name}</p>
 
                     <p className="playlist-detail__total">{tracks.total} songs</p>
