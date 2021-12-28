@@ -36,7 +36,7 @@ const userSlice = createSlice({
             .addCase(getCurrentUserInfo.fulfilled, (state, action) => {
                 state.isUserInfoLoading = false;
                 state.errorGetUserInfo = false;
-                state.userInfo = {...action.payload};
+                state.userInfo = { ...action.payload };
             })
             .addCase(getCurrentUserInfo.rejected, (state) => {
                 state.isUserInfoLoading = false;
@@ -55,7 +55,7 @@ const userSlice = createSlice({
                 state.isArtistsLoading = false;
                 state.errorGetArtists = true;
             })
-            
+
     }
 });
 
