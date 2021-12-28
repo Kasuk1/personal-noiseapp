@@ -1,5 +1,4 @@
 //* IMPORT BASIC
-import * as React from 'react';
 import { useSelector } from 'react-redux';
 
 //* IMPORT SELECTORS
@@ -18,7 +17,7 @@ export const UserInfoDetail = () => {
                 Object.keys(currentUserInfo).length > 0 && (
                     <>
                         <div className="user-info__image"
-                            style={{ backgroundImage: `url(${images ? images[0].url : 'https://cdn-icons-png.flaticon.com/512/149/149071.png'})` }}>
+                            style={{ backgroundImage: `url(${images.length > 0 ? images[0].url : 'https://cdn-icons-png.flaticon.com/512/149/149071.png'})` }}>
                         </div>
                         <h1 className="user-info__name">{display_name}</h1>
                         <p className="user-info__followers">{followers.total} followers</p>
