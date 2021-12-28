@@ -15,7 +15,7 @@ import { AppRouter } from '../routes/AppRouter';
 
 const App = () => {
     const dispatch = useDispatch();
-    const [accessToken, setAccessToken] = useState("");
+    const [accessToken, setAccessToken] = useState('');
 
     const handleLogin = () => {
         if (!accessToken) Spotify.getAccessToken();
@@ -48,7 +48,6 @@ const App = () => {
         }, localStorage.getItem("expiresIn") * 1000);
 
         return () => {
-            localStorage.clear();
             clearTimeout(timeout);
         }
     }, []);
@@ -71,17 +70,17 @@ const App = () => {
     return (
         <div className="container">
             {
-                accessToken ? (
+                accessToken
+                    ?
                     <AppRouter />
-                )
+
                     :
-                    (
-                        <div className="user-container-login">
-                            <h1 className="user-container-login__logo">Noise</h1>
-                            <button className="primary-button" onClick={handleLogin}>Login</button>
-                            <p className="user-container-login__author">Developed by Igor</p>
-                        </div>
-                    )
+
+                    <div className="user-container-login">
+                        <h1 className="user-container-login__logo">Noise</h1>
+                        <button className="primary-button" onClick={handleLogin}>Login</button>
+                        <p className="user-container-login__author">Developed by Igor</p>
+                    </div>
             }
 
         </div>

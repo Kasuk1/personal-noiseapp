@@ -1,5 +1,4 @@
 //* IMPORT BASIC
-import React from 'react';
 
 //* IMPORT REACT COMPONENTS
 import { TopArtists } from './TopArtists';
