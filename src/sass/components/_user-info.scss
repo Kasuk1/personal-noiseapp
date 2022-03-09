@@ -1,107 +1,107 @@
 .user-info-container {
-    color: $color-shadow;
-    font-size: 1.6rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+  color: $color-shadow;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 
-    .user-info {
-        @media only screen and (max-width: $bp-largest) {
-            display: flex;
-            align-items: center;
+  @media only screen and (max-width: $bp-largest) {
+    justify-content: flex-start;
+  }
 
-            & > *:not(:first-child) {
-                margin-right: 2rem;
-            }
-        }
+  .user-info {
+    @media only screen and (max-width: $bp-largest) {
+      display: flex;
+      justify-content: flex-start;
+    }
 
-        @media only screen and (max-width: $bp-smallest) {
-            & > *:not(:first-child) {
-                display: none;
-            }
-        }
+    @media only screen and (max-width: $bp-smallest) {
+      & > *:not(:first-child) {
+        display: none;
+      }
+    }
 
-        &__image {
-            width: 35rem;
-            height: 35rem;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            position: relative;
-            top: 10rem;
+    &__image {
+      width: 35rem;
+      height: 35rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      top: 10rem;
 
-            border-radius: 50%;
-            z-index: 5;
+      border-radius: 50%;
+      z-index: 5;
 
-            @media only screen and (max-width: $bp-huge) {
-                width: 8rem;
-                height: 8rem;
-                top: 0;
-            }
+      @media only screen and (max-width: $bp-huge) {
+        width: 8rem;
+        height: 8rem;
+        top: 0;
+      }
 
-            @media only screen and (max-width: $bp-small) {
-                width: 6rem;
-                height: 6rem;
-            }
+      @media only screen and (max-width: $bp-small) {
+        width: 6rem;
+        height: 6rem;
+      }
 
-            @media only screen and (max-width: $bp-tiny) {
-                display: none;
-            }
-        }
+      @media only screen and (max-width: $bp-tiny) {
+        display: none;
+      }
+    }
 
-        &__name {
-            color: $color-white;
-            font-size: 12.5rem;
-            font-weight: 800;
-            position: relative;
-            /* text-overflow: ellipsis;
+    &__name {
+      color: $color-white;
+      font-size: 12.5rem;
+      font-weight: 800;
+      position: relative;
+      /* text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap; */
-            width: 50%;
-            left: -0.8rem;
-            line-height: 1.4;
-            z-index: 10;
+      width: 50%;
+      left: -0.8rem;
+      line-height: 1.4;
+      z-index: 10;
 
-            @media only screen and (max-width: $bp-huge) {
-                font-size: 5rem;
-            }
-        }
-
-        &__followers {
-            @media only screen and (max-width: $bp-medium) {
-                display: none;
-            }
-        }
-
-        &-product {
-            display: flex;
-            align-items: center;
-            position: relative;
-            z-index: 15;
-
-            @media only screen and (max-width: $bp-medium) {
-                display: none;
-            }
-
-            &__premium {
-                color: #77d102;
-                text-transform: uppercase;
-                font-weight: 900;
-            }
-
-            &__normal {
-                color: $color-shadow;
-                text-transform: uppercase;
-                font-weight: 900;
-            }
-        }
-
-        &__more {
-            text-decoration: none;
-            font-size: 2rem;
-            color: $color-white;
-            margin-left: 0.5rem;
-            cursor: pointer;
-        }
+      @media only screen and (max-width: $bp-huge) {
+        font-size: 5rem;
+      }
     }
+
+    &__followers {
+      @media only screen and (max-width: $bp-largest) {
+        display: none;
+      }
+    }
+
+    &-product {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 15;
+
+      @media only screen and (max-width: $bp-largest) {
+        display: none;
+      }
+
+      &__premium {
+        color: #77d102;
+        text-transform: uppercase;
+        font-weight: 900;
+      }
+
+      &__normal {
+        color: $color-shadow;
+        text-transform: uppercase;
+        font-weight: 900;
+      }
+    }
+
+    &__more {
+      text-decoration: none;
+      font-size: 2rem;
+      color: $color-white;
+      margin-left: 0.5rem;
+      cursor: pointer;
+    }
+  }
 }
